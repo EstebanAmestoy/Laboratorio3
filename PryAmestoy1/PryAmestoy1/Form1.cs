@@ -16,7 +16,7 @@ namespace PryAmestoy1
         {
             InitializeComponent();
         }
-
+        
         private void cbmSuperheroes_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbmSuperheroes.Items.Clear();
@@ -35,6 +35,12 @@ namespace PryAmestoy1
 
 
 
+        }
+        ClsArchivo Clase = new ClsArchivo();
+        private void BtnCrear_Click(object sender, EventArgs e)
+        {
+            Clase.Grabar(TxtDatoNuevo.Text);
+            MessageBox.Show("¡Datos Grabados!");
         }
     }
 }
